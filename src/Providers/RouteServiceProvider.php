@@ -1,19 +1,19 @@
 <?php
-namespace RetroAce\PackageDummyTest\Modules\Admin;
+namespace RetroAce\PackageDummyTest\Providers;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use \Route;
 
 class RouteServiceProvider extends BaseServiceProvider
 {
-	protected $namespace = "App\Modules\Admin\Controllers";
+	protected $namespace = "RetroAce\PackageDummyTest\Controllers";
 
 	protected function mapDashRoutes()
 	{
 		Route::middleware(['web', 'admin'])
 			->prefix('admin')
 			->namespace($this->namespace)
-			->group(app_path('/Modules/Admin/Routes/web.php'));
+			->group(__DIR__ . '/../Routes/web.php');
 	}
 
 	protected function mapApiRoutes()
@@ -21,7 +21,7 @@ class RouteServiceProvider extends BaseServiceProvider
 		Route::middleware(['api', 'admin'])
 			->prefix('admin/api')
 			->namespace($this->namespace . "\API")
-			->group(app_path('/Modules/Admin/Routes/api.php'));
+			->group(__DIR__ . '/../Routes/api.php');
 	}
 
 	public function boot()
