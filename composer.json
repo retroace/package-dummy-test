@@ -1,0 +1,18 @@
+{
+    "name": "coder/module",
+    "description": "testmodule",
+    "authors": [
+        {
+            "name": "RetroAce",
+            "email": "rajeshdpaudel@gmail.com"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RetroAce\\PackageDummyTest\\Providers\\AdminServiceProvider"
+            ]
+        }
+    },
+}
