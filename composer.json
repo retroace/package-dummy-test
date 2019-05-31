@@ -1,5 +1,6 @@
 {
-    "name": "coder/module",
+    "name": "retroace/package-dummy-test",
+    "type": "library",
     "description": "testmodule",
     "authors": [
         {
@@ -7,12 +8,25 @@
             "email": "rajeshdpaudel@gmail.com"
         }
     ],
-    "require": {},
+    "keywords": [
+        "demo",
+        "dummy"
+    ],
+    "homepage": "https://github.com/retroace/package-dummy-test",
+    "license": "MIT",
     "extra": {
         "laravel": {
             "providers": [
                 "RetroAce\\PackageDummyTest\\Providers\\AdminServiceProvider"
             ]
+        }
+    },
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PackageDummyTest": "src/"
         }
     }
 }
